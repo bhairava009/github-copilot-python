@@ -1,60 +1,281 @@
-# Refactor a Sudoku Game written in Python Flask
+# Sudoku Game with GitHub Copilot
 
-Use this simple Sudoku game as a starting point to practice your skills with GitHub Copilot. The goal is to refactor the code to use modern technologies, while also adding new features and improving the overall user experience.
+## Project Overview
 
-## Getting Started
+This project refactors a legacy Flask-based Sudoku game into a modern, responsive web application using **GitHub Copilot** as an AI-assisted development tool.
 
-Follow these instructions to get a copy of the project up and running on your local machine.
+The application includes multiple gameplay enhancements such as difficulty selection, timer, live validation, hint functionality, leaderboard persistence, dark mode, and responsive design while maintaining clean, modular code.
 
-### Dependencies
+---
+
+# Features
+
+## Core Sudoku Features
+
+- Sudoku puzzle generation with exactly one unique solution
+- Difficulty levels:
+  - Easy
+  - Medium
+  - Hard
+- Locked pre-filled cells
+- Real-time invalid move validation
+- Puzzle completion detection
+- Congratulations message when puzzle is solved
+
+---
+
+## Interactive Features
+
+- Timer
+- Hint button
+- Check Puzzle button
+- Check Solution button
+- Player name input
+- Top 10 Leaderboard
+- Local Storage persistence
+- Dark Mode
+- Responsive layout
+
+---
+
+# Technologies Used
+
+- Python
+- Flask
+- HTML5
+- CSS3
+- JavaScript
+- Pytest
+- Git
+- GitHub
+- GitHub Copilot
+
+---
+
+# Project Structure
 
 ```
-- Modern web browser (Chrome, Firefox, Edge, etc.)
-- Python 3
+starter/
+│
+├── static/
+│   ├── styles.css
+│   ├── main.js
+│
+├── templates/
+│   └── index.html
+│
+├── app.py
+├── sudoku_logic.py
+├── routes.py
+├── game_service.py
+├── requirements.txt
+├── instruction.md
+│
+├── tests/
+│   ├── __init__.py
+│   └── test_app.py
+│
+└── Screenshots/
 ```
 
-### Installation
+---
 
-1. Fork this repository to your GitHub account. (You can use the "Fork" button on the top right corner of the repository page.)
+# Installation
 
-2. Clone your forked repository to your local machine.
-
-3. Open a terminal window and navigate to the "github-copilot-python/starter" directory.
-
-4. Create a Python virtual environment and activate it (optional but highly recommended).
+Clone the repository
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+git clone https://github.com/YOUR_GITHUB_USERNAME/github-copilot-python.git
 ```
 
-5. Install required Python packages.
+Navigate to the project
+
+```bash
+cd github-copilot-python/starter
+```
+
+Create a virtual environment
+
+Windows
+
+```bash
+python -m venv .venv
+```
+
+Activate
+
+```bash
+.venv\Scripts\activate
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-6. Run the Flask app.
+---
+
+# Running the Application
 
 ```bash
 python app.py
 ```
 
-7. Open http://127.0.0.1:5000 in your browser.
+Open
 
-## Project Instructions
+```
+http://127.0.0.1:5000
+```
 
-Use GitHub Copilot to refactor the code for this game to add more advanced features. The goal is to create a more modern and maintainable codebase and add additional functionality to the final product. You can use any combination of code completion and chat features, like Ask, Edit, or Agent modes.
+---
 
-- Errors should be handled gracefully with appropriate messages to the user.
-- Implement a Sudoku board generator that creates a valid Sudoku puzzle with a unique solution.
-- Add a timer to track how long it takes to solve the puzzle.
-- Implement a solution checker that verifies if the user's solution is correct using event delegation.
-- Add a difficulty selector to allow users to choose between easy, medium, and hard puzzles.
-- Add a hint feature that provides clues for the user that are noted with unique colors.
-- Add a check puzzle button that checks the current state of the board against the solution.
-- User should get immediate feedback on their input, such as highlighting invalid entries.
-- Top 10 scores should be saved in local storage and displayed on the page with the user's name, time taken, hints used, and difficulty level.
-- The game should be responsive and work well on both desktop and mobile devices.
-- UI colors should be visually appealing and accessible.
-- Completed and correct puzzles should display a congratulatory message with the time taken and hints used and ask for the user's name for Top 10 times.
+# Running Tests
+
+Run the test suite
+
+```bash
+python -m pytest -q
+```
+
+Example output
+
+```
+6 passed in 0.xx seconds
+```
+
+---
+
+# GitHub Copilot Usage
+
+GitHub Copilot was used throughout the project as an AI development assistant.
+
+Rather than accepting every generated response, each suggestion was reviewed, tested, and modified whenever necessary to ensure correctness and maintainability.
+
+Copilot assisted with:
+
+- Setting up the pytest testing framework
+- Refactoring the legacy Flask application
+- Difficulty selector implementation
+- Sudoku unique solution validation
+- Real-time input validation
+- Completion detection
+- Timer implementation
+- Hint functionality
+- Check Puzzle functionality
+- Leaderboard implementation using Local Storage
+- Dark Mode
+- Responsive interface improvements
+
+---
+
+# Responsible and Effective Copilot Usage
+
+GitHub Copilot was used responsibly throughout the project.
+
+The development workflow included:
+
+- Reviewing every generated suggestion before accepting it.
+- Rejecting or modifying suggestions that did not satisfy project requirements.
+- Running the pytest suite after each major feature implementation.
+- Using Copilot explanations to understand unfamiliar code before integrating it.
+- Preserving existing functionality while introducing new features.
+
+An example of evaluating or modifying a Copilot suggestion is included in:
+
+```
+Screenshots/copilot_rejected_suggestion.png
+```
+
+---
+
+# Copilot Milestones
+
+The following screenshots demonstrate the use of GitHub Copilot during development.
+
+| Milestone | Screenshot |
+|-----------|------------|
+| Testing Framework | copilot_testing_framework.png |
+| Refactoring Legacy Code | copilot_refactor.png |
+| Difficulty Selector | copilot_difficulty.png |
+| Unique Solution Validation | copilot_unique_solution.png |
+| Real-Time Validation | copilot_realtime_validation.png |
+| Completion Detection | copilot_completion.png |
+| Top 10 Leaderboard | copilot_top10.png |
+| Grid Styling | copilot_grid_style.png |
+
+---
+
+# Screenshot Naming Convention
+
+All screenshots are stored inside the **Screenshots** folder.
+
+Example filenames:
+
+```
+initial_tests.png
+copilot_testing_framework.png
+copilot_refactor.png
+copilot_difficulty.png
+copilot_unique_solution.png
+copilot_realtime_validation.png
+copilot_completion.png
+copilot_top10.png
+copilot_grid_style.png
+copilot_rejected_suggestion.png
+```
+
+---
+
+# Testing
+
+The application was verified using **Pytest**.
+
+Tests include:
+
+- Flask application loading
+- HTTP 200 response
+- Sudoku board generation
+- Sudoku helper functions
+- Difficulty generation
+- Completion detection
+- Regression testing
+
+---
+
+# References
+
+The following GitHub documentation was used to follow recommended GitHub Copilot practices.
+
+### GitHub Copilot Responsible Use
+
+https://docs.github.com/en/copilot/responsible-use-of-github-copilot
+
+### GitHub Copilot Best Practices
+
+https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot
+
+### GitHub Copilot Documentation
+
+https://docs.github.com/en/copilot/using-github-copilot-in-your-ide
+
+---
+
+# Future Improvements
+
+- Sudoku Notes Mode
+- WCAG 2.1 Accessibility Improvements
+- Sudoku Solver Animation
+- Number Usage Tracker
+
+---
+
+# Author
+
+Sonu Kumar
+
+---
+
+# License
+
+This project was completed for educational purposes as part of the Udacity GitHub Copilot Python project.
