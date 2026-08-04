@@ -1,61 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sudoku Game</title>
   <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-  <div class="app-shell">
-    <header class="app-header">
-      <div class="brand-block">
-        <p class="eyebrow">Daily challenge</p>
-        <h1>Sudoku Game</h1>
-        <p class="subtitle">Fill every row, column, and 3×3 box with the numbers 1–9.</p>
-      </div>
-      <button id="theme-toggle" class="theme-toggle" type="button">Dark Mode</button>
-    </header>
-
-    <main class="game-layout">
-      <section class="board-panel">
-        <div class="status-bar">
-          <span id="timer" class="status-pill">Time: 00:00</span>
-          <span id="message" class="message" aria-live="polite"></span>
-        </div>
-        <div id="sudoku-board" class="sudoku-board" role="grid" aria-label="Sudoku board"></div>
-      </section>
-
-      <aside class="sidebar">
-        <div class="controls">
-          <label for="difficulty">Difficulty</label>
-          <select id="difficulty">
-            <option value="easy">Easy</option>
-            <option value="medium" selected>Medium</option>
-            <option value="hard">Hard</option>
-          </select>
-
-          <div class="button-row">
-            <button id="new-game">New Game</button>
-            <button id="check-puzzle">Check Puzzle</button>
-            <button id="check-solution">Check Solution</button>
-            <button id="hint">Hint</button>
-          </div>
-
-          <div class="panel-card">
-            <label for="player-name">Player name</label>
-            <input id="player-name" type="text" placeholder="Guest" maxlength="20">
-          </div>
-
-          <div class="panel-card">
-            <h2>Leaderboard</h2>
-            <div id="leaderboard" class="leaderboard">
-              <p>No scores yet.</p>
-            </div>
-          </div>
-        </div>
-      </aside>
-    </main>
+  <h1>Sudoku Game</h1>
+  <div id="sudoku-board"></div>
+  <div class="controls">
+    <label for="difficulty">Difficulty</label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <button id="new-game">New Game</button>
+    <button id="check-solution">Check Solution</button>
+    <span id="timer">Time: 00:00</span>
+    <span id="message"></span>
   </div>
   <script src="/static/main.js"></script>
 </body>
